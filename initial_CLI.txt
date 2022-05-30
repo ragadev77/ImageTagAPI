@@ -1,0 +1,15 @@
+# database creation
+# EF after 
+dotnet ef migrations add CreateDBPostgre -o Migrations
+dotnet ef database update
+
+# docker build
+docker build --rm -t dev/imagetagapi:latest .
+
+docker image ls | grep imagetagapi
+
+docker run --rm -p 7000:7000 -e ASPNETCORE_URLS=http://+:7000 dev/imagetagapi
+docker run --rm -p 7000:7000 -p 7001:7001 -e ASPNETCORE_HTTP_PORT=https://+:7001 -e ASPNETCORE_URLS=http://+:7000 dev/imagetagapi
+
+docker ps
+docker container stop [firstdigits]
