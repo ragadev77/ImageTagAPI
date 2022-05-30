@@ -1,26 +1,26 @@
-== Development Time ==
+::: Development Tools :::
 Visual Studio Code 1.67.2
 .Net SDK 6.100
 PostgreSql 10
 Postman portable
 Docker Toolbox 19.03.1
 
-== DDL Approach ==
+::: DDL Approach :::
 Not using EFCore migrations automation, please generate ddl scripts
 
-== DDL scripts ==
+::: DDL scripts :::
 postgre_ddl.txt
 
-== DB Connections String ==
+::: DB Connections String :::
 check file : /ImageTagAPI/appsetting.json
 
-== Integration Test ==
+::: Integration Test :::
 Swagger
 
-== Entities Relationship ==
+::: Entities Relationship :::
 [pictures] 1--->N [picture_tag] N<---1 [tags]
 
-== Additional Notes == 
+::: Additional Notes ::: 
 
 POST /api/picture
 - Parameter : JSON From body 
