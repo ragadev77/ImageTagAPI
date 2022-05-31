@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS picture_tag;
 
 
 CREATE TABLE pictures(
-   pictureId INT GENERATED ALWAYS AS IDENTITY,
+   [pictureId] INT GENERATED ALWAYS AS IDENTITY,
    tags VARCHAR(255),
    filename VARCHAR(255),
    title VARCHAR(50),
@@ -23,7 +23,7 @@ CREATE TABLE tags(
 
 
 CREATE TABLE picture_tag(
-   pictureId INT GENERATED ALWAYS AS IDENTITY,
-   tagId INT GENERATED ALWAYS AS IDENTITY,
+   pictureId INT,
+   tagId INT,
    PRIMARY KEY(pictureId,TagId)
 );
